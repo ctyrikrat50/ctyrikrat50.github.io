@@ -76,6 +76,8 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 .why{display:none;margin-top:.7rem;color:var(--muted);font-size:.97rem}
 .q.done .why{display:block}
 .score{margin-top:1.2rem;font-weight:600;color:var(--spruce);min-height:1.5em}
+.form-wrap{margin-top:1.2rem;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.form-wrap iframe{display:block;width:100%;height:1650px;border:0}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -87,6 +89,7 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
   <p class="names">Martin, Dan, Michal a Petr slaví padesátiny a chtějí u toho mít vás.</p>
   <p class="when">20.–22. listopadu 2026</p>
   <p class="countdown" id="countdown" aria-live="polite"></p>
+  <p style="margin-top:1.2rem"><a class="btn" style="background:var(--moss);color:var(--spruce)" href="#ucast">Potvrdit účast</a></p>
   <svg class="ridge" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 140 L0 96 L90 70 L170 88 L260 52 L330 74 L420 38 L480 58 L560 22 L610 10 L660 26 L740 60 L820 44 L900 78 L980 56 L1070 84 L1140 66 L1200 80 L1200 140 Z" fill="#21423a"/>
     <path d="M560 22 L610 10 L660 26 L640 30 L612 20 L585 30 Z" fill="#f3f5f1" opacity=".85"/>
@@ -173,8 +176,10 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 </section>
 
 <section id="ucast">
-  <h2>Potvrzení účasti <span class="tbd">brzy</span></h2>
-  <p>Prosíme o potvrzení, jestli dorazíte, na které noci a s kým. Formulář sem doplníme v nejbližších dnech.</p>
+  <h2>Potvrzení účasti</h2>
+  <p>Dejte nám prosím vědět, jestli dorazíte, na které noci a s kým. Zabere to minutu.</p>
+  <div class="btns"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfO2cZ0fpFhwbrToNQWQhwNDEiS8bJmkVB-pB73lH7HP3PZxQ/viewform" target="_blank" rel="noopener">Otevřít formulář v novém okně</a></div>
+  <div class="form-wrap"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO2cZ0fpFhwbrToNQWQhwNDEiS8bJmkVB-pB73lH7HP3PZxQ/viewform?embedded=true" title="Formulář pro potvrzení účasti" loading="lazy">Načítání…</iframe></div>
 </section>
 
 <section id="kviz" class="quiz">
