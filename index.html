@@ -54,7 +54,7 @@ address{font-style:normal;font-weight:600;font-size:1.15rem}
 footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem calc(3rem + env(safe-area-inset-bottom,0px))}
 
 .countdown{margin-top:1rem;color:var(--slate);font-size:.98rem}
-.countdown b{color:var(--ember);font-weight:600}
+.countdown b{color:var(--ember);font-weight:600;font-variant-numeric:tabular-nums}
 .numbers{background:var(--snow);padding:3rem 1.5rem 0}
 .numbers-in{max-width:44rem;margin:0 auto}
 .numbers h2{margin-bottom:1.2rem}
@@ -223,11 +223,11 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
   function tick(){
     var d=start-new Date();
     if(d<=0){el.innerHTML='<b>Slavíme!</b>';return}
-    var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5);
-    function f(n,a,b,c){return n+' '+(n==1?a:(n>=2&&n<=4?b:c))}
-    el.innerHTML='Do oslavy zbývá <b>'+f(days,'den','dny','dní')+'</b> a '+f(h,'hodina','hodiny','hodin');
+    var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);
+    function f(n,a,b,c){return '<b>'+n+'</b> '+(n==1?a:(n>=2&&n<=4?b:c))}
+    el.innerHTML='Do oslavy zbývá '+f(days,'den','dny','dní')+', '+f(h,'hodina','hodiny','hodin')+', '+f(m,'minuta','minuty','minut')+' a '+f(sec,'sekunda','sekundy','sekund');
   }
-  tick();setInterval(tick,60000);
+  tick();setInterval(tick,1000);
 
   var qs=document.querySelectorAll('.q'),done=0,right=0;
   qs.forEach(function(q){
