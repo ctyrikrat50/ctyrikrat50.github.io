@@ -52,6 +52,31 @@ li::before{content:"";position:absolute;left:.2rem;top:1.05rem;width:.55rem;heig
 .btn:hover{filter:brightness(1.12)}
 address{font-style:normal;font-weight:600;font-size:1.15rem}
 footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem calc(3rem + env(safe-area-inset-bottom,0px))}
+
+.countdown{margin-top:1rem;color:var(--slate);font-size:.98rem}
+.countdown b{color:var(--ember);font-weight:600}
+.numbers{background:var(--snow);padding:3rem 1.5rem 0}
+.numbers-in{max-width:44rem;margin:0 auto}
+.numbers h2{margin-bottom:1.2rem}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1.6rem 1.2rem}
+.num-grid b{display:block;font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--spruce);line-height:1.1}
+.num-grid span{color:var(--muted);font-size:.95rem}
+.cottage{display:block;width:100%;max-width:26rem;height:auto;margin:1.4rem auto .4rem}
+.caption{text-align:center;color:var(--muted);font-size:.92rem}
+.quiz{counter-reset:q}
+.q{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.2rem;margin-top:1rem}
+.q p.ask{font-weight:600}
+.q p.ask::before{counter-increment:q;content:counter(q) ". ";color:var(--moss)}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.7rem}
+.opts button{font:inherit;font-size:.97rem;padding:.5rem .9rem;border-radius:8px;border:1.5px solid var(--line);background:var(--snow);color:var(--ink);cursor:pointer}
+.opts button:hover{border-color:var(--moss)}
+.opts button.right{background:var(--moss);border-color:var(--moss);color:var(--spruce);font-weight:600}
+.opts button.wrong{border-color:#c98b7e;color:#8a3b2c;text-decoration:line-through}
+.opts button:disabled{cursor:default}
+.why{display:none;margin-top:.7rem;color:var(--muted);font-size:.97rem}
+.q.done .why{display:block}
+.score{margin-top:1.2rem;font-weight:600;color:var(--spruce);min-height:1.5em}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -61,6 +86,7 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
   <h1>Dvě stě let na Boudě Artur</h1>
   <p class="names">Martin, Dan, Michal a Petr slaví padesátiny a chtějí u toho mít vás.</p>
   <p class="when">20.–22. listopadu 2026</p>
+  <p class="countdown" id="countdown" aria-live="polite"></p>
   <svg class="ridge" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 140 L0 96 L90 70 L170 88 L260 52 L330 74 L420 38 L480 58 L560 22 L610 10 L660 26 L740 60 L820 44 L900 78 L980 56 L1070 84 L1140 66 L1200 80 L1200 140 Z" fill="#21423a"/>
     <path d="M560 22 L610 10 L660 26 L640 30 L612 20 L585 30 Z" fill="#f3f5f1" opacity=".85"/>
@@ -75,10 +101,33 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 </div>
 </div>
 
+<div class="numbers"><div class="numbers-in">
+  <h2>Dvě stě let v číslech</h2>
+  <div class="num-grid">
+    <div><b>200</b><span>let dohromady</span></div>
+    <div><b>73 050</b><span>dní na světě</span></div>
+    <div><b>7,4 mld.</b><span>úderů srdce, zhruba</span></div>
+    <div><b>2 sudy</b><span>na výčepu současně</span></div>
+  </div>
+</div></div>
+
 <main>
 
 <section id="kde">
   <h2>Kde</h2>
+  <svg class="cottage" viewBox="0 0 400 240" role="img" aria-label="Ilustrace horské boudy s kouřícím komínem">
+    <path d="M0 240 L0 170 L70 120 L130 150 L200 95 L270 140 L330 110 L400 150 L400 240 Z" fill="#dfe6e0"/>
+    <g><path d="M268 58 q-8 -14 4 -24 q10 -8 2 -22" fill="none" stroke="#c5d2dc" stroke-width="5" stroke-linecap="round"><animate attributeName="opacity" values=".9;.4;.9" dur="4s" repeatCount="indefinite"/></path></g>
+    <rect x="258" y="62" width="20" height="40" fill="#21423a"/>
+    <path d="M90 128 L200 60 L310 128 Z" fill="#17302a"/>
+    <path d="M100 124 L200 66 L300 124 L290 128 L200 76 L110 128 Z" fill="#f3f5f1"/>
+    <rect x="115" y="128" width="170" height="92" fill="#8a6a4a"/>
+    <g fill="#7a5c3e"><rect x="115" y="146" width="170" height="3"/><rect x="115" y="168" width="170" height="3"/><rect x="115" y="190" width="170" height="3"/></g>
+    <g fill="#e3a33d"><rect x="132" y="146" width="28" height="26" rx="2"/><rect x="240" y="146" width="28" height="26" rx="2"/><rect x="186" y="98" width="28" height="22" rx="2"/></g>
+    <rect x="184" y="172" width="32" height="48" rx="3" fill="#17302a"/>
+    <rect x="0" y="218" width="400" height="22" fill="#f3f5f1"/>
+  </svg>
+  <p class="caption">Martin přijede už před polednem a roztopí kotel, ať je večer teplo.</p>
   <address>Bouda Artur<br>Velká Úpa 266, 542 21 Pec pod Sněžkou</address>
   <p style="margin-top:.8rem">Parkovat se dá u cesty podél chaty, místa je tam pro víc než 20 aut. Pokud můžete, domluvte se na spolujízdě.</p>
   <div class="btns">
@@ -128,6 +177,37 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
   <p>Prosíme o potvrzení, jestli dorazíte, na které noci a s kým. Formulář sem doplníme v nejbližších dnech.</p>
 </section>
 
+<section id="kviz" class="quiz">
+  <h2>Kvíz: rok 1976</h2>
+  <p>Všichni čtyři jsme ročník 1976. Víte, co se ten rok dělo, když jsme se rodili?</p>
+  <div class="q" data-right="1">
+    <p class="ask">Kdo rozhodl finále mistrovství Evropy ve fotbale penaltou, která dnes nese jeho jméno?</p>
+    <div class="opts"><button>Zdeněk Nehoda</button><button>Antonín Panenka</button><button>Ivo Viktor</button></div>
+    <p class="why">Antonín Panenka v Bělehradě jemně přehodil Seppa Maiera a Československo porazilo Západní Německo.</p>
+  </div>
+  <div class="q" data-right="2">
+    <p class="ask">Která firma vznikla 1. dubna 1976, přestože to vypadalo jako apríl?</p>
+    <div class="opts"><button>Microsoft</button><button>Atari</button><button>Apple</button></div>
+    <p class="why">Apple založili Steve Jobs, Steve Wozniak a Ronald Wayne. Wayne svůj podíl za pár týdnů prodal za 800 dolarů.</p>
+  </div>
+  <div class="q" data-right="0">
+    <p class="ask">Co ukázala tabule v Montrealu, když Nadia Comăneciová dostala první olympijskou desítku?</p>
+    <div class="opts"><button>1.00</button><button>10.0</button><button>0.00</button></div>
+    <p class="why">Tabule neuměla zobrazit dvě číslice před desetinnou čárkou, takže ukázala 1.00.</p>
+  </div>
+  <div class="q" data-right="1">
+    <p class="ask">Co v červenci 1976 poprvé úspěšně přistálo na Marsu?</p>
+    <div class="opts"><button>Pathfinder</button><button>Viking 1</button><button>Mars 3</button></div>
+    <p class="why">Americký Viking 1 přistál 20. července a poslal první fotografie z povrchu Marsu.</p>
+  </div>
+  <div class="q" data-right="0">
+    <p class="ask">Kde se Československo v roce 1976 stalo mistrem světa v hokeji?</p>
+    <div class="opts"><button>Katovice</button><button>Moskva</button><button>Praha</button></div>
+    <p class="why">V polských Katovicích. O rok později titul obhájili ve Vídni.</p>
+  </div>
+  <p class="score" id="score" aria-live="polite"></p>
+</section>
+
 <section id="kontakt">
   <h2>Dotazy</h2>
   <p>Ozvěte se kterémukoli z nás čtyř. Všechny novinky budou vždy tady na této stránce.</p>
@@ -136,5 +216,33 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 </main>
 
 <footer>Naposledy upraveno 30. 9. 2026</footer>
+<script>
+(function(){
+  var el=document.getElementById('countdown');
+  var start=new Date('2026-11-20T16:00:00+01:00');
+  function tick(){
+    var d=start-new Date();
+    if(d<=0){el.innerHTML='<b>Slavíme!</b>';return}
+    var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5);
+    function f(n,a,b,c){return n+' '+(n==1?a:(n>=2&&n<=4?b:c))}
+    el.innerHTML='Do oslavy zbývá <b>'+f(days,'den','dny','dní')+'</b> a '+f(h,'hodina','hodiny','hodin');
+  }
+  tick();setInterval(tick,60000);
+
+  var qs=document.querySelectorAll('.q'),done=0,right=0;
+  qs.forEach(function(q){
+    var ok=+q.dataset.right,bs=q.querySelectorAll('button');
+    bs.forEach(function(b,i){b.addEventListener('click',function(){
+      bs.forEach(function(x,j){x.disabled=true;if(j===ok)x.classList.add('right')});
+      if(i!==ok)b.classList.add('wrong');else right++;
+      q.classList.add('done');done++;
+      if(done===qs.length){
+        var msg=right===5?'Plný počet. Na Arturovi máte první pivo z výčepu na nás.':right>=3?'Slušný výsledek, ročník 1976 by byl spokojený.':'Nevadí, v listopadu vám to rádi převyprávíme.';
+        document.getElementById('score').textContent=right+' z 5. '+msg;
+      }
+    })});
+  });
+})();
+</script>
 </body>
 </html>
