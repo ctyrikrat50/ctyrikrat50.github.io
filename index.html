@@ -2,27 +2,139 @@
 <html lang="cs">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>4 × 50 na chatě</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>4 × 50 na Boudě Artur · 20.–22. 11. 2026</title>
 <meta name="robots" content="noindex">
+<meta name="description" content="Společná oslava padesátin Martina, Dana, Michala a Petra v Krkonoších.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
 <style>
-:root{--pine:#16302a;--moss:#8fae7d;--birch:#eef1ec;--dusk:#c9d6e3}
-*{box-sizing:border-box;margin:0}
-html,body{height:100%}
-body{background:var(--pine);color:var(--birch);font-family:"Bricolage Grotesque",system-ui,sans-serif;display:grid;place-items:center;padding:2rem;text-align:center}
-.big{font-size:clamp(5rem,26vw,14rem);font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--moss)}
-.big span{color:var(--birch);font-weight:400}
-h1{font-size:clamp(1.4rem,5vw,2.2rem);font-weight:400;margin-top:1.2rem}
-p{margin-top:1rem;color:var(--dusk);max-width:32ch;margin-inline:auto;line-height:1.5}
+:root{
+  --spruce:#17302a; --spruce-2:#21423a; --moss:#9cb48a; --snow:#f3f5f1;
+  --slate:#c5d2dc; --ember:#e3a33d; --ink:#1b2622; --muted:#5d6b66; --line:#d9dfda;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--snow);color:var(--ink);line-height:1.55;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:4px}
+
+/* hero */
+.hero{background:var(--spruce);color:var(--snow);padding:calc(3.5rem + env(safe-area-inset-top,0px)) 1.5rem 0;text-align:center;overflow:hidden}
+.hero .big{font-size:clamp(5.5rem,27vw,15rem);font-weight:800;line-height:.85;letter-spacing:-.045em;color:var(--moss)}
+.hero .big span{color:var(--snow);font-weight:400;padding:0 .04em}
+.hero h1{font-size:clamp(1.35rem,4.6vw,2.1rem);font-weight:600;margin-top:1.1rem;letter-spacing:-.01em}
+.hero .names{color:var(--slate);margin-top:.35rem}
+.hero .when{display:inline-block;margin-top:1.6rem;padding:.55rem 1.1rem;border:1.5px solid var(--moss);border-radius:999px;font-weight:600}
+.ridge{display:block;width:100%;height:clamp(70px,12vw,140px);margin-top:2.5rem}
+
+/* quick facts */
+.facts{max-width:62rem;margin:-1px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));background:var(--spruce-2);color:var(--snow)}
+.facts div{padding:1.4rem 1.5rem;border-top:1px solid rgba(255,255,255,.08)}
+.facts b{display:block;font-size:1.25rem;font-weight:600}
+.facts small{color:var(--slate);font-size:.95rem}
+.facts-wrap{background:linear-gradient(var(--spruce) 50%,var(--snow) 50%)}
+
+main{max-width:44rem;margin:0 auto;padding:3.5rem 1.5rem 2rem}
+section{padding:2.2rem 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-size:1.65rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.8rem;color:var(--spruce)}
+p+p{margin-top:.8rem}
+ul{list-style:none;margin-top:.6rem}
+li{padding:.45rem 0 .45rem 1.6rem;position:relative}
+li::before{content:"";position:absolute;left:.2rem;top:1.05rem;width:.55rem;height:.55rem;border-radius:50%;background:var(--moss)}
+.tbd{display:inline-block;font-size:.85rem;font-weight:600;background:#f6e6c8;color:#6b4a12;padding:.1rem .55rem;border-radius:999px;margin-left:.35rem;vertical-align:.1em}
+.note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--ember);padding:1rem 1.2rem;border-radius:6px;margin-top:1.1rem;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.1rem}
+.btn{display:inline-block;padding:.7rem 1.15rem;border-radius:8px;font-weight:600;text-decoration:none;background:var(--spruce);color:var(--snow)}
+.btn.alt{background:transparent;color:var(--spruce);border:1.5px solid var(--spruce)}
+.btn:hover{filter:brightness(1.12)}
+address{font-style:normal;font-weight:600;font-size:1.15rem}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem calc(3rem + env(safe-area-inset-bottom,0px))}
 </style>
 </head>
 <body>
+
+<header class="hero">
+  <div class="big" aria-label="4 krát 50">4<span>×</span>50</div>
+  <h1>Dvě stě let na Boudě Artur</h1>
+  <p class="names">Martin, Dan, Michal a Petr slaví padesátiny a chtějí u toho mít vás.</p>
+  <p class="when">20.–22. listopadu 2026</p>
+  <svg class="ridge" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 140 L0 96 L90 70 L170 88 L260 52 L330 74 L420 38 L480 58 L560 22 L610 10 L660 26 L740 60 L820 44 L900 78 L980 56 L1070 84 L1140 66 L1200 80 L1200 140 Z" fill="#21423a"/>
+    <path d="M560 22 L610 10 L660 26 L640 30 L612 20 L585 30 Z" fill="#f3f5f1" opacity=".85"/>
+  </svg>
+</header>
+
+<div class="facts-wrap">
+<div class="facts">
+  <div><b>Bouda Artur</b><small>Velká Úpa, Pec pod Sněžkou</small></div>
+  <div><b>Pá – Ne</b><small>Přijeďte, kdy vám to v pátek vyjde</small></div>
+  <div><b>Spaní na místě</b><small>Postele i povlečení jsou připravené</small></div>
+</div>
+</div>
+
 <main>
-  <div class="big">4<span>×</span>50</div>
-  <h1>Oslava na chatě</h1>
-  <p>Stránka se připravuje. Brzy tu najdete termín, místo a vše, co s sebou.</p>
+
+<section id="kde">
+  <h2>Kde</h2>
+  <address>Bouda Artur<br>Velká Úpa 266, 542 21 Pec pod Sněžkou</address>
+  <p style="margin-top:.8rem">Parkovat se dá u cesty podél chaty, místa je tam pro víc než 20 aut. Pokud můžete, domluvte se na spolujízdě.</p>
+  <div class="btns">
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bouda+Artur%2C+Velk%C3%A1+%C3%9Apa+266%2C+Pec+pod+Sn%C4%9B%C5%BEkou" target="_blank" rel="noopener">Otevřít v mapách</a>
+  </div>
+</section>
+
+<section id="kdy">
+  <h2>Kdy</h2>
+  <p>Od pátku 20. do neděle 22. listopadu 2026. V pátek se sjíždíme postupně, podle toho, jak vás pustí práce. Chata bude od odpoledne vytopená.</p>
+  <p>Přesný čas odjezdu v neděli upřesníme.</p>
+  <div class="btns">
+    <a class="btn alt" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=4%20%C3%97%2050%20na%20Boud%C4%9B%20Artur&dates=20261120/20261123&location=Bouda%20Artur%2C%20Velk%C3%A1%20%C3%9Apa%20266%2C%20Pec%20pod%20Sn%C4%9B%C5%BEkou&details=Spole%C4%8Dn%C3%A1%20oslava%20pades%C3%A1tin%3A%20https%3A%2F%2Fctyrikrat50.github.io" target="_blank" rel="noopener">Přidat do Google kalendáře</a>
+    <a class="btn alt" download="4x50-oslava.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2F4x50%2F%2FCS%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A4x50-20261120%40ctyrikrat50.github.io%0D%0ADTSTAMP%3A20260930T120000Z%0D%0ADTSTART%3BVALUE%3DDATE%3A20261120%0D%0ADTEND%3BVALUE%3DDATE%3A20261123%0D%0ASUMMARY%3A4%20%C3%97%2050%20na%20Boud%C4%9B%20Artur%0D%0ALOCATION%3ABouda%20Artur%5C%2C%20Velk%C3%A1%20%C3%9Apa%20266%5C%2C%20Pec%20pod%20Sn%C4%9B%C5%BEkou%0D%0AURL%3Ahttps%3A%2F%2Fctyrikrat50.github.io%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR">Kalendář iPhone / Outlook</a>
+  </div>
+</section>
+
+<section id="spani">
+  <h2>Spaní</h2>
+  <p>Na chatě je kolem 45 postelí a pár rezervních matrací. Povlečení, teplá voda i všechno potřebné na místě je. Rozdělení pokojů pošleme před akcí.</p>
+  <p class="note">Kdyby nás bylo víc než postelí, dá se v pohodě spát i na karimatce. Kdo by chtěl, vezme si karimatku a spacák. Dáme vědět včas.</p>
+</section>
+
+<section id="jidlo">
+  <h2>Jídlo a pití</h2>
+  <p>O jídlo a pití se postaráme my. Na chatě je výčep na dva sudy a kávovar, takže pivo i kafe budou.</p>
+  <p>Jestli máte nějaké omezení v jídle, napište nám to při potvrzení účasti.</p>
+</section>
+
+<section id="s-sebou">
+  <h2>Co s sebou</h2>
+  <ul>
+    <li>Teplé oblečení a přezůvky. Je listopad a jsme na horách.</li>
+    <li>Pevné boty na procházky, případně i běžky nebo lyže, pokud napadne sníh.</li>
+    <li>Ručník a osobní věci.</li>
+    <li>Dobrou náladu. Na ní stavíme celý program.</li>
+  </ul>
+</section>
+
+<section id="program">
+  <h2>Program <span class="tbd">upřesníme</span></h2>
+  <p>Pátek večer příjezd a posezení, sobota hlavní oslava, neděle pozvolný odjezd. Podrobnosti doplníme sem.</p>
+</section>
+
+<section id="ucast">
+  <h2>Potvrzení účasti <span class="tbd">brzy</span></h2>
+  <p>Prosíme o potvrzení, jestli dorazíte, na které noci a s kým. Formulář sem doplníme v nejbližších dnech.</p>
+</section>
+
+<section id="kontakt">
+  <h2>Dotazy</h2>
+  <p>Ozvěte se kterémukoli z nás čtyř. Všechny novinky budou vždy tady na této stránce.</p>
+</section>
+
 </main>
+
+<footer>Naposledy upraveno 30. 9. 2026</footer>
 </body>
 </html>
