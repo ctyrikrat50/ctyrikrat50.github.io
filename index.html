@@ -221,7 +221,7 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 
 </main>
 
-<footer>Naposledy upraveno 1. 10. 2026</footer>
+<footer>Naposledy upraveno <span id="upd">2. 10. 2026</span></footer>
 <script>
 (function(){
   var el=document.getElementById('countdown');
@@ -234,6 +234,11 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
     el.innerHTML='Do oslavy zbývá '+f(days,'den','dny','dní')+', '+f(h,'hodina','hodiny','hodin')+', '+f(m,'minuta','minuty','minut')+' a '+f(sec,'sekunda','sekundy','sekund');
   }
   tick();setInterval(tick,1000);
+
+  var u=new Date(document.lastModified);
+  if(!isNaN(u) && Date.now()-u.getTime()>5000){
+    document.getElementById('upd').textContent=u.getDate()+'. '+(u.getMonth()+1)+'. '+u.getFullYear();
+  }
 
   var qs=document.querySelectorAll('.q'),done=0,right=0;
   qs.forEach(function(q){
