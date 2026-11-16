@@ -78,6 +78,17 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 .score{margin-top:1.2rem;font-weight:600;color:var(--spruce);min-height:1.5em}
 .form-wrap{margin-top:1.2rem;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
 .form-wrap iframe{display:block;width:100%;height:1650px;border:0}
+.lastmin{background:#fff;border:2px solid var(--ember);border-radius:12px;padding:1.4rem 1.3rem;margin:0 0 1rem}
+.lastmin h2{color:var(--spruce);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.lastmin .tag{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--ember);color:var(--spruce);padding:.2rem .6rem;border-radius:999px}
+.mug{font-size:1.15rem;font-weight:600;margin:.4rem 0 1.2rem;padding:.9rem 1rem;background:#f6e6c8;border-radius:8px;color:#4a3410}
+.lastmin h3{font-size:1.15rem;margin:.4rem 0 .5rem;color:var(--spruce)}
+.zones{list-style:none;margin:.6rem 0 0}
+.zones li{padding:.35rem 0 .35rem 2.1rem}
+.zones li::before{display:none}
+.zones .z{position:absolute;left:0;top:.4rem;width:1.5rem;height:1.5rem;border-radius:4px;font-weight:700;font-size:.85rem;display:grid;place-items:center;color:#111}
+.plan{display:block;margin-top:1rem;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.plan img{display:block;width:100%;height:auto}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -89,7 +100,7 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
   <p class="names">Martin, Dan, Michal a Petr slaví padesátiny a chtějí u toho mít vás.</p>
   <p class="when">20.–22. listopadu 2026</p>
   <p class="countdown" id="countdown" aria-live="polite"></p>
-  <p style="margin-top:1.2rem"><a class="btn" style="background:var(--moss);color:var(--spruce)" href="#ucast">Potvrdit účast do 31. 10.</a></p>
+  <p style="margin-top:1.2rem"><a class="btn" style="background:var(--ember);color:var(--spruce)" href="#last-minute">Last minute info</a></p>
   <svg class="ridge" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 140 L0 96 L90 70 L170 88 L260 52 L330 74 L420 38 L480 58 L560 22 L610 10 L660 26 L740 60 L820 44 L900 78 L980 56 L1070 84 L1140 66 L1200 80 L1200 140 Z" fill="#21423a"/>
     <path d="M560 22 L610 10 L660 26 L640 30 L612 20 L585 30 Z" fill="#f3f5f1" opacity=".85"/>
@@ -117,6 +128,22 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
 
 <main>
 
+<section id="last-minute" class="lastmin">
+  <h2><span class="tag">Last minute info</span> Než vyrazíte</h2>
+  <p class="mug">🍺 Přivezte si prosím vlastní půllitr!</p>
+  <h3>Parkování</h3>
+  <p>Míst je omezeně, proto prosíme, dodržujte plánek:</p>
+  <ul class="zones">
+    <li><span class="z" style="background:#ffff00">1</span><b>Hosté</b> parkují natěsno, bez možnosti výjezdu.</li>
+    <li><span class="z" style="background:#00ffff">2</span><b>Pořadatelé.</b></li>
+    <li><span class="z" style="background:#ee82ee">3</span><b>Hosté, kteří musí odjet dřív,</b> parkují podél cesty.</li>
+    <li><span class="z" style="background:#ff0000;color:#fff">4</span><b>Na trávníku zákaz parkování!</b></li>
+  </ul>
+  <a class="plan" href="parkovani-2.jpg" target="_blank" rel="noopener"><img src="parkovani-2.jpg" alt="Letecký snímek chaty s vyznačenými zónami parkování 1 až 4" loading="lazy"></a>
+  <a class="plan" href="parkovani-1.jpg" target="_blank" rel="noopener"><img src="parkovani-1.jpg" alt="Mapa příjezdu k Horské boudě Artur po Vavřincově cestě" loading="lazy"></a>
+  <div class="btns"><a class="btn" href="https://mapy.com/s/jolucegene" target="_blank" rel="noopener">Navigovat na Mapy.com</a></div>
+</section>
+
 <section id="proc">
   <h2>Proč? Aneb náš příběh</h2>
   <p>Čtyři sudičky, jedna chata, dva možné konce a jeden Smrťák, který to má taky těžké. Jak to všechno začalo a jak to může dopadnout, záleží i na vás.</p>
@@ -139,7 +166,7 @@ footer{text-align:center;color:var(--muted);font-size:.9rem;padding:2rem 1.5rem 
   </svg>
   <p class="caption">Dan přijede už před polednem a roztopí kotel, ať je večer teplo.</p>
   <address>Bouda Artur<br>Velká Úpa 266, 542 21 Pec pod Sněžkou</address>
-  <p style="margin-top:.8rem">Parkovat se dá na parkovišti u chaty i u cesty, místa je tam pro víc než 20 aut. Abychom se vešli, bude dobré, když nepojede každý sám ve svém autě.</p>
+  <p style="margin-top:.8rem">Parkovat se dá na parkovišti u chaty i u cesty, místa je tam pro víc než 20 aut. Abychom se vešli, bude dobré, když nepojede každý sám ve svém autě. Kde přesně parkovat, najdete v <a href="#last-minute">plánku nahoře</a>.</p>
   <div class="btns">
     <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bouda+Artur%2C+Velk%C3%A1+%C3%9Apa+266%2C+Pec+pod+Sn%C4%9B%C5%BEkou" target="_blank" rel="noopener">Otevřít v mapách</a>
   </div>
