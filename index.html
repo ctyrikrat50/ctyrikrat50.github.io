@@ -51,7 +51,7 @@ footer p+p{margin-top:.5rem;font-size:.85rem}
 .vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:.5rem;margin:.5rem 0}
 .vid.wide{grid-column:1/-1}
 .vid video{width:100%;max-height:75vh;border-radius:8px;background:#000;display:block}
-.vid figcaption{font-size:.9rem;color:var(--muted);margin-top:.3rem}
+
 .more{margin-top:1.6rem;padding:1rem 1.2rem;background:#fff;border:1px solid var(--line);border-left:4px solid var(--moss);border-radius:6px}
 .lb{position:fixed;inset:0;z-index:50;background:rgba(10,20,17,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
 .lb.open{display:flex}
@@ -97,41 +97,75 @@ footer p+p{margin-top:.5rem;font-size:.85rem}
 
 <section id="fotky">
   <h2>Fotky</h2>
-  <h3 class="gh">Sobota: výstup na Sněžku</h3>
+  <h3 class="gh">Výstup na Sněžku</h3>
   <div class="grid">
-    <a class="ph" href="fotky/01-start-na-snezku.jpg" data-cap="Start na Sněžku"><img src="fotky/01-start-na-snezku-nahled.jpg" width="640" height="480" alt="Start na Sněžku" loading="lazy"></a>
-    <a class="ph" href="fotky/02-alpaka.jpg" data-cap="Alpaka"><img src="fotky/02-alpaka-nahled.jpg" width="480" height="640" alt="Alpaka" loading="lazy"></a>
-    <a class="ph" href="fotky/03-cesta-obrim-dolem.jpg" data-cap="Cestou Obřím dolem"><img src="fotky/03-cesta-obrim-dolem-nahled.jpg" width="640" height="360" alt="Cestou Obřím dolem" loading="lazy"></a>
-    <a class="ph" href="fotky/04-vystup-ve-slunci.jpg" data-cap="Výstup ve slunci"><img src="fotky/04-vystup-ve-slunci-nahled.jpg" width="640" height="480" alt="Výstup ve slunci" loading="lazy"></a>
-    <a class="ph" href="fotky/05-obri-dul.jpg" data-cap="Obří důl"><img src="fotky/05-obri-dul-nahled.jpg" width="640" height="480" alt="Obří důl" loading="lazy"></a>
-    <a class="ph" href="fotky/06-kafe-cestou.jpg" data-cap="Kafe cestou"><img src="fotky/06-kafe-cestou-nahled.jpg" width="640" height="480" alt="Kafe cestou" loading="lazy"></a>
-    <a class="ph" href="fotky/07-kolac-ke-kafi.jpg" data-cap="Koláč ke kafi"><img src="fotky/07-kolac-ke-kafi-nahled.jpg" width="480" height="640" alt="Koláč ke kafi" loading="lazy"></a>
-    <a class="ph" href="fotky/08-vanice-u-kaple.jpg" data-cap="Vánice u kaple na Sněžce"><img src="fotky/08-vanice-u-kaple-nahled.jpg" width="640" height="480" alt="Vánice u kaple na Sněžce" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-01.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-01-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 1" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-02.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-02-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 2" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-03.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-03-nahled.jpg" width="640" height="360" alt="Výstup na Sněžku, fotka 3" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-04.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-04-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 4" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-05.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-05-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 5" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-06.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-06-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 6" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-07.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-07-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 7" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-08.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-08-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 8" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-09.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-09-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 9" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-10.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-10-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 10" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-11.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-11-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 11" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-12.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-12-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 12" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-13.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-13-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 13" loading="lazy"></a>
   </div>
   <div class="vids">
-    <figure class="vid wide"><video controls preload="none" playsinline poster="video/video-vrchol-snezky-nahled.jpg"><source src="video/video-vrchol-snezky.mp4" type="video/mp4"></video><figcaption>Na vrcholu Sněžky</figcaption></figure>
-    <figure class="vid"><video controls preload="none" playsinline poster="video/video-vanice-na-snezce-nahled.jpg"><source src="video/video-vanice-na-snezce.mp4" type="video/mp4"></video><figcaption>Vánice na Sněžce</figcaption></figure>
+    <figure class="vid wide"><video controls preload="none" playsinline poster="video/video-vrchol-snezky-nahled.jpg"><source src="video/video-vrchol-snezky.mp4" type="video/mp4"></video></figure>
+    <figure class="vid"><video controls preload="none" playsinline poster="video/video-vanice-na-snezce-nahled.jpg"><source src="video/video-vanice-na-snezce.mp4" type="video/mp4"></video></figure>
   </div>
   <div class="grid">
-    <a class="ph" href="fotky/09-snezka-selfie.jpg" data-cap="Na vrcholu"><img src="fotky/09-snezka-selfie-nahled.jpg" width="480" height="640" alt="Na vrcholu" loading="lazy"></a>
-    <a class="ph" href="fotky/10-vrchol-snezky.jpg" data-cap="Vrchol Sněžky"><img src="fotky/10-vrchol-snezky-nahled.jpg" width="640" height="480" alt="Vrchol Sněžky" loading="lazy"></a>
-    <a class="ph" href="fotky/11-spolecne-na-vrcholu.jpg" data-cap="Společně na vrcholu"><img src="fotky/11-spolecne-na-vrcholu-nahled.jpg" width="480" height="640" alt="Společně na vrcholu" loading="lazy"></a>
-    <a class="ph" href="fotky/12-sestup-kosodrevinou.jpg" data-cap="Sestup kosodřevinou"><img src="fotky/12-sestup-kosodrevinou-nahled.jpg" width="360" height="640" alt="Sestup kosodřevinou" loading="lazy"></a>
-    <a class="ph" href="fotky/13-bouda-ruzohorky.jpg" data-cap="Bouda Růžohorky"><img src="fotky/13-bouda-ruzohorky-nahled.jpg" width="640" height="288" alt="Bouda Růžohorky" loading="lazy"></a>
-    <a class="ph" href="fotky/14-polevka-na-boude.jpg" data-cap="Polévka na boudě"><img src="fotky/14-polevka-na-boude-nahled.jpg" width="640" height="480" alt="Polévka na boudě" loading="lazy"></a>
-    <a class="ph" href="fotky/15-zasnezena-bouda.jpg" data-cap="Zasněžená bouda"><img src="fotky/15-zasnezena-bouda-nahled.jpg" width="480" height="640" alt="Zasněžená bouda" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-14.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-14-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 14" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-15.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-15-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 15" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-16.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-16-nahled.jpg" width="640" height="640" alt="Výstup na Sněžku, fotka 16" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-17.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-17-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 17" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-18.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-18-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 18" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-19.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-19-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 19" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-20.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-20-nahled.jpg" width="360" height="640" alt="Výstup na Sněžku, fotka 20" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-21.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-21-nahled.jpg" width="640" height="288" alt="Výstup na Sněžku, fotka 21" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-22.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-22-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 22" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-23.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-23-nahled.jpg" width="480" height="640" alt="Výstup na Sněžku, fotka 23" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-24.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-24-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 24" loading="lazy"></a>
+    <a class="ph" href="fotky/snezka-25.jpg" data-cap="Výstup na Sněžku"><img src="fotky/snezka-25-nahled.jpg" width="640" height="480" alt="Výstup na Sněžku, fotka 25" loading="lazy"></a>
   </div>
   <h3 class="gh">Večer na Arturovi</h3>
   <div class="grid">
-    <a class="ph" href="fotky/16-vecer-na-arturovi.jpg" data-cap="Večer na Arturovi"><img src="fotky/16-vecer-na-arturovi-nahled.jpg" width="640" height="360" alt="Večer na Arturovi" loading="lazy"></a>
-    <a class="ph" href="fotky/17-u-krbu.jpg" data-cap="U krbu"><img src="fotky/17-u-krbu-nahled.jpg" width="640" height="480" alt="U krbu" loading="lazy"></a>
-    <a class="ph" href="fotky/18-u-baru.jpg" data-cap="U baru"><img src="fotky/18-u-baru-nahled.jpg" width="640" height="360" alt="U baru" loading="lazy"></a>
-    <a class="ph" href="fotky/19-plakaty-na-pul-cesty.jpg" data-cap="Plakáty „Na půl cesty“"><img src="fotky/19-plakaty-na-pul-cesty-nahled.jpg" width="640" height="480" alt="Plakáty „Na půl cesty“" loading="lazy"></a>
-    <a class="ph" href="fotky/20-ctyri-dorty.jpg" data-cap="Čtyři dorty, čtyři padesátky"><img src="fotky/20-ctyri-dorty-nahled.jpg" width="640" height="480" alt="Čtyři dorty, čtyři padesátky" loading="lazy"></a>
-    <a class="ph" href="fotky/21-ctyri-oslavenci.jpg" data-cap="Čtyři oslavenci"><img src="fotky/21-ctyri-oslavenci-nahled.jpg" width="480" height="640" alt="Čtyři oslavenci" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-01.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-01-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 1" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-02.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-02-nahled.jpg" width="640" height="360" alt="Večer na Arturovi, fotka 2" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-03.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-03-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 3" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-04.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-04-nahled.jpg" width="640" height="360" alt="Večer na Arturovi, fotka 4" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-05.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-05-nahled.jpg" width="640" height="360" alt="Večer na Arturovi, fotka 5" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-06.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-06-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 6" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-07.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-07-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 7" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-08.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-08-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 8" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-09.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-09-nahled.jpg" width="480" height="640" alt="Večer na Arturovi, fotka 9" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-10.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-10-nahled.jpg" width="360" height="640" alt="Večer na Arturovi, fotka 10" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-11.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-11-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 11" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-12.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-12-nahled.jpg" width="480" height="640" alt="Večer na Arturovi, fotka 12" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-13.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-13-nahled.jpg" width="480" height="640" alt="Večer na Arturovi, fotka 13" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-14.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-14-nahled.jpg" width="480" height="640" alt="Večer na Arturovi, fotka 14" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-15.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-15-nahled.jpg" width="640" height="474" alt="Večer na Arturovi, fotka 15" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-16.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-16-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 16" loading="lazy"></a>
+    <a class="ph" href="fotky/vecer-17.jpg" data-cap="Večer na Arturovi"><img src="fotky/vecer-17-nahled.jpg" width="640" height="480" alt="Večer na Arturovi, fotka 17" loading="lazy"></a>
   </div>
   <div class="vids">
-    <figure class="vid"><video controls preload="none" playsinline poster="video/video-sfoukavani-dortu-nahled.jpg"><source src="video/video-sfoukavani-dortu.mp4" type="video/mp4"></video><figcaption>Sfoukávání dortů</figcaption></figure>
+    <figure class="vid wide"><video controls preload="none" playsinline poster="video/video-vecer-plakaty-1-nahled.jpg"><source src="video/video-vecer-plakaty-1.mp4" type="video/mp4"></video></figure>
+    <figure class="vid wide"><video controls preload="none" playsinline poster="video/video-vecer-plakaty-2-nahled.jpg"><source src="video/video-vecer-plakaty-2.mp4" type="video/mp4"></video></figure>
+    <figure class="vid"><video controls preload="none" playsinline poster="video/video-sfoukavani-dortu-nahled.jpg"><source src="video/video-sfoukavani-dortu.mp4" type="video/mp4"></video></figure>
+  </div>
+  <h3 class="gh">Zasněžené okolí Artura</h3>
+  <div class="grid">
+    <a class="ph" href="fotky/sneh-01.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-01-nahled.jpg" width="640" height="405" alt="Zasněžené okolí Artura, fotka 1" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-02.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-02-nahled.jpg" width="480" height="640" alt="Zasněžené okolí Artura, fotka 2" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-03.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-03-nahled.jpg" width="480" height="640" alt="Zasněžené okolí Artura, fotka 3" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-04.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-04-nahled.jpg" width="480" height="640" alt="Zasněžené okolí Artura, fotka 4" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-05.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-05-nahled.jpg" width="480" height="640" alt="Zasněžené okolí Artura, fotka 5" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-06.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-06-nahled.jpg" width="640" height="480" alt="Zasněžené okolí Artura, fotka 6" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-07.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-07-nahled.jpg" width="480" height="640" alt="Zasněžené okolí Artura, fotka 7" loading="lazy"></a>
+    <a class="ph" href="fotky/sneh-08.jpg" data-cap="Zasněžené okolí Artura"><img src="fotky/sneh-08-nahled.jpg" width="468" height="640" alt="Zasněžené okolí Artura, fotka 8" loading="lazy"></a>
   </div>
   <p class="more">Máte další fotky nebo videa? Pošlete je kterémukoli z nás čtyř a rádi je sem přidáme.</p>
 </section>
